@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PhishGuard | Cybersecurity Awareness</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <h2 class="logo">PhishGuard</h2>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Phishing</a></li>
+                <li><a href="#threats">Threats</a></li>
+                <li><a href="#protection">Protection</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#email-lab">Email Lab</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- Homepage -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="tagline">CYBERSECURITY AWARENESS PLATFORM</p>
+
+            <h1>
+                Think Before You Click.
+                <span>Stay Cyber Safe.</span>
+            </h1>
+
+            <p>
+                Learn how phishing attacks work, recognise
+                suspicious messages and protect your digital identity.
+            </p>
+
+            <a href="#about" class="main-button">
+                Start Learning
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- About Phishing -->
+    <section class="section" id="about">
+
+        <h2>What is Phishing?</h2>
+
+        <p>
+            Phishing is a cyberattack in which criminals use
+            deceptive messages, websites or links to trick
+            people into revealing sensitive information or
+            performing unsafe actions.
+        </p>
+
+    </section>
+
+    <!-- Common Threats -->
+    <section class="section threats" id="threats">
+
+        <h2>Common Types of Phishing</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>Email Phishing</h3>
+                <p>
+                    Fraudulent emails designed to deceive
+                    recipients into clicking harmful links
+                    or sharing sensitive information.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Spear Phishing</h3>
+                <p>
+                    Targeted phishing messages designed
+                    for a particular individual or organisation.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Smishing</h3>
+                <p>
+                    Phishing attacks carried out through
+                    SMS or text messages.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Protection -->
+    <section class="section" id="protection">
+
+        <h2>How to Protect Yourself</h2>
+
+        <ul class="tips">
+            <li>Verify website addresses before clicking.</li>
+            <li>Be careful with unexpected attachments.</li>
+            <li>Never share passwords through suspicious links.</li>
+            <li>Enable multi-factor authentication.</li>
+            <li>Report suspicious emails and messages.</li>
+        </ul>
+        <li><a href="#url-lab">URL Lab</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+
+    </section>
+<!-- Email Awareness Lab -->
+<section class="section email-lab" id="email-lab">
+
+    <h2>Phishing Email Awareness Lab</h2>
+
+    <p>
+        Examine the fictional email below and identify
+        the warning signs that could indicate phishing.
+    </p>
+
+    <div class="email-box">
+
+        <h3>Sample Email</h3>
+
+        <p><strong>From:</strong> security@example.invalid</p>
+
+        <p><strong>Subject:</strong> Urgent: Account Verification Required</p>
+
+        <hr>
+
+        <p>Hello User,</p>
+
+        <p>
+            We noticed unusual activity on your account.
+            Please review this fictional message carefully.
+        </p>
+
+        <p>
+            You must verify your account immediately to
+            avoid temporary account suspension.
+        </p>
+
+        <p>
+            Example link:
+            <strong>https://account-check.example.invalid</strong>
+        </p>
+
+        <p>Regards,<br>Account Security Team</p>
+
+    </div>
+
+    <button onclick="revealEmailAnalysis()">
+        Analyse This Email
+    </button>
+
+    <div id="email-analysis"></div>
+
+    <!-- URL Inspection Lab -->
+<section class="section url-lab" id="url-lab">
+
+    <h2>URL Inspection Lab</h2>
+
+    <p>
+        Learn how to identify suspicious website addresses
+        before opening them.
+    </p>
+
+    <div class="url-box">
+
+        <h3>Example 1</h3>
+
+        <p>https://www.google.com</p>
+
+        <button onclick="inspectURL(1)">
+            Inspect URL
+        </button>
+
+        <div id="url-result-1"></div>
+
+    </div>
+
+    <div class="url-box">
+
+        <h3>Example 2</h3>
+
+        <p>https://google.example.invalid</p>
+
+        <button onclick="inspectURL(2)">
+            Inspect URL
+        </button>
+
+        <div id="url-result-2"></div>
+
+    </div>
+
+    <div class="url-box">
+
+        <h3>Example 3</h3>
+
+        <p>http://secure-login.example.invalid</p>
+
+        <button onclick="inspectURL(3)">
+            Inspect URL
+        </button>
+
+        <div id="url-result-3"></div>
+
+    </div>
+
+</section>
+<!-- PhishGuard Awareness Dashboard -->
+<section class="section dashboard" id="dashboard">
+
+    <h2>Awareness Dashboard</h2>
+
+    <p>
+        Track your cybersecurity awareness learning activity.
+    </p>
+
+    <div class="dashboard-container">
+
+        <div class="dashboard-card">
+            <h3>Quiz Score</h3>
+            <h2 id="dashboard-score">0 / 5</h2>
+            <p>Latest quiz result</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>Email Analysis</h3>
+            <h2 id="dashboard-email">Not Started</h2>
+            <p>Email awareness activity</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>URLs Inspected</h3>
+            <h2 id="dashboard-urls">0 / 3</h2>
+            <p>URL inspection activity</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>Learning Progress</h3>
+            <h2 id="dashboard-progress">0%</h2>
+            <p>Overall activity completion</p>
+        </div>
+
+    </div>
+
+</section>
+
+</section>
+    <!-- Interactive Quiz -->
+    <section class="section quiz-section" id="quiz">
+
+        <h2>Test Your Phishing Awareness</h2>
+
+        <p>
+            Test your ability to identify suspicious
+            messages, links and phishing attempts.
+        </p>
+
+        <div id="quiz-container">
+
+            <button onclick="startQuiz()">
+                Start Awareness Quiz
+            </button>
+
+        </div>
+        <button onclick="resetProgress()" class="reset-button">
+    Reset My Progress
+</button
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            PhishGuard | Ethical Cybersecurity Awareness Project
+        </p>
+
+        <p>Educational demonstration only.</p>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
